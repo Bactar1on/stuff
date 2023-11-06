@@ -1,3 +1,3 @@
 onload = () =>{
-        document.body.classList.remove("flower-container");
+        document.body.classList.remove("container");
 };
