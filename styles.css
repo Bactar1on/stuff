@@ -1,0 +1,83 @@
+css
+body {
+    background-color: #f2ecc9; /* Crushed cream white background color */
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.flower-container {
+    animation: sway 5s ease-in-out infinite;
+}
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: bottom center;
+}
+
+.petal {
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000; /* Red petals */
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate 5s ease-in-out infinite;
+}
+
+.petal:nth-child(1) {
+    top: 0;
+    left: 50px;
+}
+
+.petal:nth-child(2) {
+    top: 50px;
+    left: 100px;
+}
+
+.petal:nth-child(3) {
+    top: 100px;
+    left: 50px;
+}
+
+.petal:nth-child(4) {
+    top: 50px;
+    left: 0;
+}
+
+.stem {
+    width: 5px;
+    height: 100px;
+    background-color: #000000; /* Black stem */
+    position: absolute;
+    bottom: 0;
+    left: 48px;
+}
+
+@keyframes sway {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
